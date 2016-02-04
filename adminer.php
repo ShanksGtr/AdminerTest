@@ -23,7 +23,7 @@ function adminer_object() {
 
 		function credentials() {
 			// server, username and password for connecting to database
-			return array('eu-cdbr-azure-west-d.cloudapp.net', 'be97c0f94cdd84', 'f6c953a6');
+			return array('localhost', 'ODBC', '');
 		}
 
 		function database() {
