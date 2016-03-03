@@ -8,9 +8,9 @@
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
         if($check !== false) {
             echo "File is an image - " . $check["mime"] . ".";
-            echo $imageFileType . "/n";
-            echo $target_file  . "/n";
-            echo $target_dir  . "/n";
+            echo $imageFileType . "<br>";
+            echo $target_file  . "<br>";
+            echo $target_dir  . "<br>";
             $uploadOk = 1;
         } else {
             echo "File is not an image.";
