@@ -17,15 +17,15 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('img', 0) as $images)
+       // foreach($html->find('img', 0) as $images)
 
             //echo '<img src="'.$images->src.'"/>';
-            echo $images->innertext;
+           // echo $images->innertext;
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
        // include_once('simple_html_dom.php');
-        $i = 0;
-        foreach(array_slice($html->find('div[class=inner]'), 0 , 4) as $class)
+
+        foreach(array_slice($html->find('div[class=inner]'), 0 , 5) as $class)
             echo $class->innertext;
 
         ?>
