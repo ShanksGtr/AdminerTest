@@ -17,7 +17,7 @@
         <?php
         include_once('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('img[src$=5]') as $images)
+        foreach($html->find('img', 4) as $images)
 
             echo '<img src="'.$images->src.'"/>' .  '<br>';
         //foreach($html->find('li') as $li)
