@@ -14,7 +14,11 @@
         </form>
     </div>
     <div>
-        <?php $content = file_get_contents("http://www.videogamecountdown.com/"); ?>
+        <?php
+            $content = file_get_contents("http://www.videogamecountdown.com/");
+            preg_match_all('/<body>(.*?)<\/body>/s',$content,$output,PREG_SET_ORDER);
+            echo $output;
+        ?>
     </div>
 </body>
 </html>
