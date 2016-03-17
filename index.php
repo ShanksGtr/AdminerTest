@@ -13,7 +13,7 @@
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
-    <div style="image">
+    <div style="img: border-radius: 50%;">
         <?php
         include_once('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
