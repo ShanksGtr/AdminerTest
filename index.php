@@ -19,8 +19,9 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('img') as $element)
 
-            echo $element->src. '<br>';
+            echo '<img src="'.$element->src.'"/>' .  '<br>';
         ?>
+
     </div>
 </body>
 </html>
