@@ -23,7 +23,9 @@
             echo $images->innertext;
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
-
+       // include_once('simple_html_dom.php');
+        foreach($html->find('inner') as $class)
+            echo $class->innertext;
         ?>
 
     </div>
