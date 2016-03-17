@@ -19,7 +19,7 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('img') as $images)
 
-            echo '<img src="'.$images->src.'" style="img: border-radius: 50%; height: 200px; width: 200px;"/>' .  '<br>';
+            echo '<img src="'.$images->src.'" style="img: border-radius: 50%; height: 200px; width: 200px; margin-left: 5px; margin-top: 5px"/>';
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
 
