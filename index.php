@@ -16,7 +16,7 @@
     <div>
         <?php
         include_once('simple_html_dom.php');
-        $html = file_get_html('http://www.ip2location.com/demo/1.22.99.222');
+        $html = file_get_html('http://www.videogamecountdown.com/');
         echo $html->find("#main-content .table", 0);
         ?>
     </div>
