@@ -13,13 +13,15 @@
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
-    <div>
+    <div style="image">
         <?php
         include_once('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('img') as $element)
+        foreach($html->find('img') as $images)
+            echo '<img src="'.$images->src.'"/>' .  '<br>';
+        foreach($html->find('li') as $li)
+            echo $li->src . '<br>';
 
-            echo '<img src="'.$element->src.'"/>' .  '<br>';
         ?>
 
     </div>
