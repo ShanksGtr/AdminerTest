@@ -24,7 +24,7 @@
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
        // include_once('simple_html_dom.php');
-        foreach($html->find('li div[class=inner]', 2) as $class)
+        foreach($html->find('div[class=inner]', 2) as $class)
             echo $class->innertext;
 
         ?>
