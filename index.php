@@ -17,9 +17,9 @@
         <?php
         include_once('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('img') as $images)
+        foreach($html->find('img', 0) as $images)
 
-            echo '<img src="'.$images->src.'" style="img: border-radius: 50%; height: 200px; width: 200px; margin-left: 5px; margin-top: 5px"/>';
+            echo '<img src="'.$images->innertext.'""/>';
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
 
