@@ -13,5 +13,8 @@
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
+    <div>
+        <?php $content = file_get_contents("http://www.videogamecountdown.com/"); ?>
+    </div>
 </body>
 </html>
