@@ -17,9 +17,9 @@
         <?php
         include_once('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('img') as $element)
-            echo '<img src="$element->src"/>' . '<br>';
+        foreach($html->find('img') as $element){
         ?>
+        <img src="<?php echo $element->src. '<br>'; } ?>"/>
     </div>
 </body>
 </html>
