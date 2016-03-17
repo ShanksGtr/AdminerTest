@@ -19,7 +19,7 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('img', 0) as $images)
 
-            echo '<img src="'.$images->innertext.'""/>';
+            echo '<img src="'.$images->src.'""/>';
         //foreach($html->find('li') as $li)
             //echo $li->src . '<br>';
 
