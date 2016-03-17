@@ -25,7 +25,9 @@
             //echo $li->src . '<br>';
        // include_once('simple_html_dom.php');
 
-        foreach(array_slice($html->find('div[class=inner]'), 0 , 5) as $class)
+
+        // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
+        foreach(array_slice($html->find('div[class=inner]'), 1 , 5) as $class)
             echo $class->innertext;
 
         ?>
