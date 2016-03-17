@@ -15,9 +15,9 @@
     </div>
     <div>
         <?php
-            $content = file_get_contents("http://www.videogamecountdown.com/");
-            preg_match_all('/<body>(.*?)<\/body>/s',$content,$output,PREG_SET_ORDER);
-            echo $output;
+        include_once('simple_html_dom.php');
+        $html = file_get_html('http://www.ip2location.com/demo/1.22.99.222');
+        echo $html->find("#main-content .table", 0);
         ?>
     </div>
 </body>
