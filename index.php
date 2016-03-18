@@ -42,7 +42,7 @@
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
             //$titles = $games->find('h3', 0);
-            echo $images ;
+            echo '<img src="'.$images.'"/>' ;
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
