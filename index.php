@@ -41,8 +41,10 @@
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
+            $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             //$titles = $games->find('h3', 0);
-            echo '<img src="'.$images.'"/>' ;
+            echo '<img src="'.$images.'"/>' . "<br>" .
+                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>";
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
