@@ -42,7 +42,7 @@
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
             $images = $game->find('div[class=gridimg] a',0)->attr['href'];
             //$titles = $games->find('h3', 0);
-            echo $images ;
+            echo '<img src="http://www.videogamecountdown.com/'.$images.'"/>';
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
