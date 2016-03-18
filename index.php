@@ -36,7 +36,7 @@
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('div[class=contentpanel]'),0 , 6) as $class)
+        foreach(array_slice($html->find('li div.inner'),0 , 6) as $class)
             echo $class->innertext;
 
            // $item['image'] = ($class->find('img')->src);
