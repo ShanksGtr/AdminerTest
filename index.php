@@ -31,9 +31,10 @@
             echo $class->innertext . "<br>";
             }
         foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
-            $games['image'] = $class->find('div.gridimg')->src;
 
-            $class[] = $games
+            $games['image'] = $class->find('div.gridimg')->src;
+            $games['name'] = $class->find('div.inner')->h3;
+            $class[] = $games;
             }
             echo $class;
 
