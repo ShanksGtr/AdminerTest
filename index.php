@@ -6,7 +6,7 @@
     <?php
     include('simple_html_dom.php');
     $html = file_get_html('http://www.videogamecountdown.com/');
-    foreach(array_slice($html->find('body script'),0 , 6) as $time)
+    foreach(array_slice($html->find('head script'),0 , 6) as $time)
         $time->innertext;
     ?>
 </head>
