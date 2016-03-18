@@ -18,10 +18,9 @@
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach(array_slice($html->find('img'),0,6) as $images)
-            echo '<img src="'.$images->src.'"/>';
-
-        foreach(array_slice($html->find('h3 a'),0, 1) as $titles)
-            echo $titles->href;
+            foreach(array_slice($html->find('h3 a'),0, 1) as $titles)
+            echo '<img src="'.$images->src.'"/>' .
+                '<a href="http://www.videogamecountdown.com/'.$titles->href.'"> ->For more information</a>' ;
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
