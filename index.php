@@ -39,8 +39,8 @@
         $games = $html->find('div[class=inner]');
         foreach (array_slice($games , 0,5) as $game) {
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
-            $images = $game->find('div[class=gridimg] a')->attr['href'];
-            $titles = $games->find('h3');
+            $images = $game->find('div[class=gridimg] a',0)->attr['href'];
+            $titles = $games->find('h3', 0);
             echo $images . "<br>" . $titles;
         }
            // $item['image'] = ($class->find('img')->src);
