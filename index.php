@@ -20,7 +20,7 @@
         foreach(array_slice($html->find('img'),0,6) as $images)
             echo '<img src="'.$images->src.'"/>';
 
-        foreach(array_slice($html->find('h3 a'),0) as $titles)
+        foreach(array_slice($html->find('h3 a'),0, 1) as $titles)
             echo $titles->href;
 
 
