@@ -31,7 +31,7 @@
 
             echo $class->src . "<br>" .
                  $class->h3 . "<br>" .
-                 $class->date . "<br>" .
+                // $class->date . "<br>" .
                  $class->href . "<br>";
             }
         ?>
