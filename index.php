@@ -17,26 +17,19 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-       // foreach($html->find('img', 0) as $images)
+        foreach(array_slice($html->find('img'),0,6) as $images)
+            echo '<img src="'.$images->src.'"/>';
 
-            //echo '<img src="'.$images->src.'"/>';
-           // echo $images->innertext;
-        //foreach($html->find('li') as $li)
-            //echo $li->src . '<br>';
-       // include_once('simple_html_dom.php');
+        foreach(array_slice($html->find('h3'),0,6) as $titles)
+            echo $titles->inneertext;
 
 
-        // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
+              // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
        // foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
           //  echo $class->innertext . "<br>";
          //   }
-        foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
 
-            $games = $class->src;
-            $games = $class->h3;
-            $class[] = $games;
-            }
-            echo $class;
+
 
         ?>
 
