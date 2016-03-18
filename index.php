@@ -34,9 +34,10 @@
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('body'),0 , 6) as $class)
+        foreach(array_slice($html->find('body'),0 , 6) as $class){
+            $item['image'] = $class->find('div.inner', 0)->innertext;
             echo $class->href . "<br>" .
-             $class->date;
+             $class->date;}
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
               //  $class->a . "<br>".
