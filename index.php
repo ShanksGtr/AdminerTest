@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-
+    <?php
+    include('simple_html_dom.php');
+    $html = file_get_html('http://www.videogamecountdown.com/');
+    foreach($html->find('meta') as $time)
+        $time->innertext;
+    ?>
     <?php
     include('simple_html_dom.php');
     $html = file_get_html('http://www.videogamecountdown.com/');
