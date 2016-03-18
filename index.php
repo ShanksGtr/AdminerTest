@@ -30,17 +30,18 @@
            // echo '<img src="'.$images->src.'"/>' . "<br>" .
             //    '<a href="http://www.videogamecountdown.com/'.$images->href.'"> ->For more information</a>' . "<br>" .
             //    $time->span;
-            //    ;
+
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('div[class^=inner]'),0 , 6) as $class) {
-            $item['image'] = ($class->find('img')->src);
-            echo $class->href . "<br>".
-                $class->a . "<br>".
-                $class->£item['image'] . "<br>".
-                $class->date . "<br>" ;
-            }
+        foreach(array_slice($html->find('body'),0 , 6) as $class)
+            echo $class->innertext;
+           // $item['image'] = ($class->find('img')->src);
+           // echo $class->href . "<br>".
+              //  $class->a . "<br>".
+              //  $class->£item['image'] . "<br>".
+              //  $class->date . "<br>" ;
+        //    }
 
 
 
