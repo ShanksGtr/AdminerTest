@@ -21,7 +21,7 @@
             echo '<img src="'.$images->src.'"/>';
 
         foreach(array_slice($html->find('h3'),0,6) as $titles)
-            echo $titles->a;
+            echo $titles->href;
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
