@@ -27,13 +27,13 @@
 
 
         // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
-            echo $class->innertext . "<br>";
-            }
+       // foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
+          //  echo $class->innertext . "<br>";
+         //   }
         foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
 
-            $games['image'] = $class->find('div.gridimg')->src;
-            $games['name'] = $class->find('div.inner')->h3;
+            $games = $class->src;
+            $games = $class->h3;
             $class[] = $games;
             }
             echo $class;
