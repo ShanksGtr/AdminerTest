@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+    <?php
+        include('simple_html_dom.php');
+        $html = file_get_html('http://www.videogamecountdown.com/');
+        foreach(array_slice($html->find('head span'),0 , 6) as $class){
+         echo $class->innertext;
+    ?>
+
 </head>
 <body>
     <h1>We are testing now ADMINER! RAWR</h1>
@@ -34,10 +41,8 @@
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('body'),0 , 6) as $class){
-            $item['image'] = $class->find('div.inner', 0)->innertext;
-            $class[] = $item;}
-            echo $class ;
+        foreach(array_slice($html->find('div.inner'),0 , 6) as $class){
+            echo $class->innertext;
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
               //  $class->a . "<br>".
