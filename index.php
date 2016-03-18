@@ -37,7 +37,7 @@
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
         $games = $html->find('div[class=inner]');
-        foreach ($games as $game) {
+        foreach (array_slice($games , 0,5) as $game) {
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
             $images = $game->find('div[class=gridimg] a',0 )->attr['href'];
             echo $images;
