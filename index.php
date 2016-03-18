@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+
     <?php
     include('simple_html_dom.php');
     $html = file_get_html('http://www.videogamecountdown.com/');
-    foreach(array_slice($html->find('head script'),0 , 6) as $time)
+    foreach($html->find('head script') as $time)
         $time->innertext;
     ?>
 </head>
@@ -51,7 +52,7 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach(array_slice($html->find('script'),0 , 6) as $time)
+        foreach($html->find('body script') as $time)
             $time->innertext;
         ?>
 
