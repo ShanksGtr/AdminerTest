@@ -6,8 +6,8 @@
     <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach(array_slice($html->find('head span'),0 , 6) as $class){
-         echo $class->innertext;
+        foreach(array_slice($html->find('head span'),0 , 6) as $time){
+         echo $time->innertext;
     ?>
 
 </head>
@@ -26,10 +26,6 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
 
 
-
-
-
-
        // foreach(array_slice($html->find('img h3 a'),0,6) as $images)
        // foreach($html->find('h3 a') as $titles)
       //  foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
@@ -41,7 +37,7 @@
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-        foreach(array_slice($html->find('div.inner'),0 , 6) as $class){
+        foreach(array_slice($html->find('div.inner'),0 , 6) as $class)
             echo $class->innertext;
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
