@@ -18,7 +18,7 @@
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach(array_slice($html->find('img'),0,6) as $images)
-        foreach(array_slice($html->find('h3 a'),0, 6) as $titles)
+        foreach($html->find('h3 a') as $titles)
         foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
 
             echo '<img src="'.$images->src.'"/>' . "<br>" .
