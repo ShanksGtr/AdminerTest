@@ -52,7 +52,7 @@
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('body script') as $time)
-           echo $time->innertext;
+           echo "<script>" . $time->innertext. "</script>";
         ?>
 
     </div>
