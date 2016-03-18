@@ -19,7 +19,7 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach(array_slice($html->find('img h3 a'),0,6) as $images)
        // foreach($html->find('h3 a') as $titles)
-       // foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
+        foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
 
             echo '<img src="'.$images->src.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$images->href.'"> ->For more information</a>' . "<br>" .
