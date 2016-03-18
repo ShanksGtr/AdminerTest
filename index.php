@@ -17,20 +17,26 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach(array_slice($html->find('img h3 a'),0,6) as $images)
-       // foreach($html->find('h3 a') as $titles)
-        foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
 
-            echo '<img src="'.$images->src.'"/>' . "<br>" .
-                '<a href="http://www.videogamecountdown.com/'.$images->href.'"> ->For more information</a>' . "<br>" .
-                $time->span;
-                ;
+
+
+
+
+
+       // foreach(array_slice($html->find('img h3 a'),0,6) as $images)
+       // foreach($html->find('h3 a') as $titles)
+      //  foreach(array_slice($html->find('div [class=date]'),0, 1) as $time)
+
+           // echo '<img src="'.$images->src.'"/>' . "<br>" .
+            //    '<a href="http://www.videogamecountdown.com/'.$images->href.'"> ->For more information</a>' . "<br>" .
+            //    $time->span;
+            //    ;
 
 
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
-       // foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
-          //  echo $class->innertext . "<br>";
-         //   }
+        foreach(array_slice($html->find('div[class=inner]'),0 , 6) as $class) {
+            echo $class->gridimg . "<br>";
+            }
 
 
 
