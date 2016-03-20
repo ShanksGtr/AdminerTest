@@ -42,7 +42,7 @@
             $date = $game->find('div[class=date] span', 0)->outertext;
             //$titles = $games->find('h3', 0);
             if ($info === 'http://www.videogamecountdown.com/') {
-                false;
+                return false;
             }
             echo '<img src="'.$images.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
