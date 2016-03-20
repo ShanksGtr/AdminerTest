@@ -32,8 +32,8 @@
               // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
         $games = $html->find('div[class=inner]');
 
-        $games[2] = "";
-        foreach (array_slice($games, 0,6) as $game) {
+        $games = $games[0][1][3][4][5];
+        foreach ($games as $game) {
 
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
