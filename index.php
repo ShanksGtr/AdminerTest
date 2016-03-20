@@ -7,7 +7,13 @@
     include('simple_html_dom.php');
     $html = file_get_html('http://www.videogamecountdown.com/');
     foreach($html->find('head script') as $time)
-        echo "<script>" . $time->plaintext. "</script>";
+        echo "<script>" .$time->plaintext. "</script>";
+    ?>
+    <?php
+    include('simple_html_dom.php');
+    $html = file_get_html('http://www.videogamecountdown.com/');
+    foreach($html->find('head meta') as $meta)
+        echo "<meta>" .$meta->plaintext. "</meta>";
     ?>
 </head>
 <body>
