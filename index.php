@@ -17,6 +17,12 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
+        foreach($html->find('body script') as $time)
+            echo "<script>" . $time->innertext. "</script>";
+        ?>
+        <?php
+        include('simple_html_dom.php');
+        $html = file_get_html('http://www.videogamecountdown.com/');
 
 
        // foreach(array_slice($html->find('img h3 a'),0,6) as $images)
@@ -52,14 +58,13 @@
 
 
         ?>
+        <h2>----------------------------------------</h2>
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('body script') as $time)
-           echo "<script>" . $time->innertext. "</script>";
+        foreach($html->find('body') as $body)
+            echo $body->innertext;
         ?>
-        <h2>----------------------------------------</h2>
-
 
     </div>
 </body>
