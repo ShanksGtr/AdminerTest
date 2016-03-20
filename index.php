@@ -42,9 +42,11 @@
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
+            $date = $game->find('div[class=blogdate] span', 0)->attr['span'];
             //$titles = $games->find('h3', 0);
             echo '<img src="'.$images.'"/>' . "<br>" .
-                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>";
+                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
+                . $date;
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
