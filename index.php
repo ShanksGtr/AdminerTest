@@ -16,7 +16,6 @@
         echo "<meta>" .$meta->plaintext. "</meta>";
     ?>
     <link rel="alternate" type="application/rss+xml" title="Video Game Countdown" href="http://feeds.feedburner.com/videogamecountdown/JfLt">
-    <link href="http://www.videogamecountdown.com/assets/application.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
@@ -71,6 +70,13 @@
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('body script') as $time)
            echo "<script>" . $time->innertext. "</script>";
+        ?>
+        <h2>----------------------------------------</h2>
+        <?php
+        include('simple_html_dom.php');
+        $html = file_get_html('http://www.videogamecountdown.com/');
+        foreach($html->find('body') as $body)
+            echo $body->innertext;
         ?>
 
     </div>
