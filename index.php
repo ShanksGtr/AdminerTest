@@ -6,7 +6,7 @@
 </head>
 <body data-gr-c-s-loaded="true">
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
-    <div>
+    <div hidden>
         <form action="upload.php" method="post" enctype="multipart/form-data">
             Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
