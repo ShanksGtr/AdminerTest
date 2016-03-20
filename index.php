@@ -34,7 +34,7 @@
 
 
         foreach (array_slice($games, 0,6) as $game) {
-            if ($games[2]){
+            if ($game[2]){
                 echo "";
             }
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
