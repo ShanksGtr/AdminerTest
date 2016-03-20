@@ -59,12 +59,14 @@
 
         ?>
         <h2>----------------------------------------</h2>
+        <div hidden>
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
         foreach($html->find('body') as $body)
-            echo $body->innertext;
+            $body->innertext;
         ?>
+        </div>
 
     </div>
 </body>
