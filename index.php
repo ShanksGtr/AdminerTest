@@ -11,7 +11,7 @@
     ?>
 </head>
 <body>
-    <h1>We are testing now ADMINER! RAWR</h1>
+    <h1>We are testing now ADMINER! RAWR and taking info</h1>
     <div>
         <form action="upload.php" method="post" enctype="multipart/form-data">
             Select image to upload:
