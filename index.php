@@ -15,6 +15,8 @@
     foreach($html->find('head meta') as $meta)
         echo "<meta>" .$meta->plaintext. "</meta>";
     ?>
+    <link rel="alternate" type="application/rss+xml" title="Video Game Countdown" href="http://feeds.feedburner.com/videogamecountdown/JfLt">
+    <link href="http://www.videogamecountdown.com/assets/application.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
