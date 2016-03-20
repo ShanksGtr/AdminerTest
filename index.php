@@ -41,7 +41,7 @@
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             $date = $game->find('div[class=date] span', 0)->outertext;
             //$titles = $games->find('h3', 0);
-            if ($info == false) {
+            if ($info === 'http://www.videogamecountdown.com/') {
 
             }
             echo '<img src="'.$images.'"/>' . "<br>" .
