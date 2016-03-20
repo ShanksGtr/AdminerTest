@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>test</title>
 </head>
-<body>
+<body data-gr-c-s-loaded="true">
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
     <div>
         <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -59,12 +59,7 @@
            echo "<script>" . $time->innertext. "</script>";
         ?>
         <h2>----------------------------------------</h2>
-        <?php
-        include('simple_html_dom.php');
-        $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('body') as $body)
-            echo $body->innertext;
-        ?>
+
 
     </div>
 </body>
