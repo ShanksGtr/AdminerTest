@@ -34,7 +34,9 @@
 
 
         foreach (array_slice($games, 0,6) as $game) {
-
+            if ($games[2]){
+                break;
+            }
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
            // $titles = $games->find('div[class=inner] h3', 0)->attr['a'];
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
