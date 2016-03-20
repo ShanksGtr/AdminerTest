@@ -3,19 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <?php
-    include('simple_html_dom.php');
-    $html = file_get_html('http://www.videogamecountdown.com/');
-    foreach($html->find('head script') as $time)
-        echo "<script>" .$time->plaintext. "</script>";
-    ?>
-    <?php
-    include('simple_html_dom.php');
-    $html = file_get_html('http://www.videogamecountdown.com/');
-    foreach($html->find('head meta') as $meta)
-        echo "<meta>" .$meta->plaintext. "</meta>";
-    ?>
-    <link rel="alternate" type="application/rss+xml" title="Video Game Countdown" href="http://feeds.feedburner.com/videogamecountdown/JfLt">
 </head>
 <body>
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
