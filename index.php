@@ -40,7 +40,7 @@
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             $date = $game->find('div[class=date] span', 0)->outertext;
-            $titles = $games->find('h3', 0);
+            $titles = $games->find('h3', 0)->plaintext;
 
             echo '<img src="'.$images.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$info.'"> '.$titles.'  </a>' . "<br>"
