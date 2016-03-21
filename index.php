@@ -36,7 +36,7 @@
         foreach ($games as $game) {
 
         //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
-            $titles = $games->find('h3 a', 0)->plaintext;
+            $titles = $game->find('h3 a', 0)->plaintext;
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             $date = $game->find('div[class=date] span', 0)->outertext;
