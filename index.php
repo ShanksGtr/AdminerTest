@@ -75,8 +75,7 @@
                 var hrs = 23-now.getHours();
                 var mins = 59-now.getMinutes();
                 var secs = 59-now.getSeconds();
-                var str = '';
-                str += ''+hrs+':'+mins+':'+secs+':';
+                str = '<br>0 days '+hrs+':'+mins+':'+secs+':';
                 document.getElementById('countdownToMidnight').innerHTML = str;
             }
             </script>
