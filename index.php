@@ -76,7 +76,7 @@
                 var mins = 59-now.getMinutes();
                 var secs = 59-now.getSeconds();
                 var str = '';
-                str += '<br>'+hrs+':'+mins+':'+secs+':';
+                str += ''+hrs+':'+mins+':'+secs+':';
                 document.getElementById('countdownToMidnight').innerHTML = str;
             }
             </script>
