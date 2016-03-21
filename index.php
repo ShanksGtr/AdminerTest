@@ -58,10 +58,10 @@
         ?>
         <div hidden>
         <?php
-        //include('simple_html_dom.php');
-        //$html = file_get_html('http://www.videogamecountdown.com/');
-        //foreach($html->find('body') as $body)
-          //  echo $body->innertext;
+        include('simple_html_dom.php');
+        $html = file_get_html('http://www.videogamecountdown.com/');
+        foreach($html->find('body') as $body)
+            echo $body->innertext;
         ?>
         </div>
     </div>
