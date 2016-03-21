@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>test</title>
 </head>
-<body data-gr-c-s-loaded="true">
+<body onload="_cntDown=setInterval('ShowTimes()',1000)">
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
     <div hidden>
         <form action="upload.php" method="post" enctype="multipart/form-data">
