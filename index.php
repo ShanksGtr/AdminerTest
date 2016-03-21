@@ -15,8 +15,7 @@
     </div>
     <div">
         <?php
-        include('simple_html_dom.php');
-        $html = file_get_html('http://www.videogamecountdown.com/');
+
 
 
        // foreach(array_slice($html->find('img h3 a'),0,6) as $images)
@@ -26,16 +25,17 @@
            // echo '<img src="'.$images->src.'"/>' . "<br>" .
             //    '<a href="http://www.videogamecountdown.com/'.$images->href.'"> ->For more information</a>' . "<br>" .
             //    $time->span;
+        // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
+        //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
 
-
-
-              // http://stackoverflow.com/questions/8765879/how-to-limit-foreach-loop-to-three-loops/8765910#8765910
+        include('simple_html_dom.php');
+        $html = file_get_html('http://www.videogamecountdown.com/');
         $games = $html->find('div[class=inner]');
 
         $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
         foreach ($games as $game) {
 
-        //foreach(array_slice($html->find('div.inner'),0 , 6) as $class) {
+
             $titles = $game->find('h3 a', 0)->plaintext;
             $images = $game->find('div[class=gridimg] img',0)->attr['src'];
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
