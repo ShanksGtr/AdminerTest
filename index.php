@@ -13,7 +13,7 @@
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
-    <div style="img: border-radius: 50%; height: 200px; width: 200px;">
+    <div">
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
@@ -65,24 +65,6 @@
         ?>
         </div>
     </div>
-    <div><br>
-        <h2>Timer test:</h2>
-        <script type="text/javascript">
-            // From: http://www.webdeveloper.com/forum/showthread.php?t=215504
 
-
-            function ShowTimes() {
-                var now = new Date();
-                var hrs = 23-now.getHours();
-                var mins = 59-now.getMinutes();
-                var secs = 59-now.getSeconds();
-                var str = '';
-                str += '<br>'+hrs+':'+mins+':'+secs+':';
-                document.getElementById('countdownToMidnight').innerHTML = str;
-            }
-            </script>
-            <div id="countdownToMidnight"></div>
-
-    </div>
 </body>
 </html>
