@@ -65,7 +65,7 @@
         ?>
         </div>
     </div>
-    <div>
+    <div onload="_cntDown=setInterval('ShowTimes()',1000)">
         <h2>Timer test:</h2>
         <script type="text/javascript">
             // From: http://www.webdeveloper.com/forum/showthread.php?t=215504
