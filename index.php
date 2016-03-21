@@ -72,10 +72,12 @@
 
 
             function ShowTimes() {
+                var now = new Date();
                 var hrs = 23-now.getHours();
                 var mins = 59-now.getMinutes();
                 var secs = 59-now.getSeconds();
-                str = '<br>0 days '+hrs+':'+mins+':'+secs+':';
+                var str = '';
+                str += '<br>0 days '+hrs+' hours '+mins+' minutes '+secs+' seconds';
                 document.getElementById('countdownToMidnight').innerHTML = str;
             }
             </script>
