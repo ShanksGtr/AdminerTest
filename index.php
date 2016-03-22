@@ -44,11 +44,12 @@
             $html = file_get_html('http://www.videogamecountdown.com/'.$info);
             $games2 = $html->find('div[class=two_third]', 0)->innertext;
             $games3 = $html->find('div[class="one_third last projectdetails"]', 0)->innertext;
+            $games4 = $html->find('div[class=pagerwrapper] a', 0)->outertext;
             //$titles = $game->find('h3', 0);
 
             echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
-                . $date . " " . $games2 . "<br> " . $games3;
+                . $date . " " . $games2 . "<br> " . $games3 . "<br>" . $games4;
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
