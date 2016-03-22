@@ -44,7 +44,7 @@
             $html = file_get_html('http://www.videogamecountdown.com/'.$info);
             $games2 = $html->find('div[class=two_third]', 0)->innertext;
             $games3 = $html->find('div[class="one_third last projectdetails"]', 0)->innertext;
-            $games4 = $html->find('div[class=pagerwrapper] a', 0)->outertext;
+            $games4 = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             //$titles = $game->find('h3', 0);
 
             echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
