@@ -5,7 +5,6 @@
 td a {
     pointer-events: none;
     cursor: default;
-    opacity: 0.6;
     text-decoration: none;
     color: black;
 }
