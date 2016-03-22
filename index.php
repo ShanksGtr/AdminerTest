@@ -41,12 +41,12 @@
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             $date = $game->find('div[class=date] span', 0)->outertext;
             $html = file_get_html('http://www.videogamecountdown.com/'.$info);
-            $games2 = $html->find('div[class=two_third] p')->plaintext;
+            $games2 = $html->find('div[class=two_third]');
             //$titles = $game->find('h3', 0);
 
             echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
-                . $date . " " . $games2;
+                . $date . " " . $games2->p;
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
