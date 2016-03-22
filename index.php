@@ -47,7 +47,7 @@
 
             echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
                 '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
-                . $date . " " . $games2->plaintext;
+                . $date . " " . $games2->outertext;
         }
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
