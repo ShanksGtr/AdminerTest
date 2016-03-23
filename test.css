@@ -11,13 +11,13 @@ td a {
 
 .colum1 {
     float: left;
-    width: 50%;
+    width: 34%;
 }
 
 .colum2 {
     border: 1px solid black;
     float: left;
-    width: 50%;
+    width: 66%;
 }
 
 #maincolum {
