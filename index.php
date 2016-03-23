@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
@@ -14,8 +17,9 @@
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
-    <div>
-        <div ID="maincolum">
+    <div class="container">
+        <div class="jumbotron">
+            <div>
         <?php
 
 
@@ -48,8 +52,8 @@
             $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             //$titles = $game->find('h3', 0);
 
-            echo '<div class="colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                '<div class="colum2">' .  $desc . "<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+            echo '<div class="col col-md-6">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
+                '<div class="col col-md-6">' .  $desc . "<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
         }
 
            // $item['image'] = ($class->find('img')->src);
@@ -62,15 +66,17 @@
 
 
         ?>
+                <div hidden>
+                    <?php
+                    include('simple_html_dom.php');
+                    $html = file_get_html('http://www.videogamecountdown.com/');
+                    foreach($html->find('body script') as $body)
+                        echo $body->outertext;
+                    ?>
+                </div>
+                </div>
         </div>
-        <div hidden>
-        <?php
-        include('simple_html_dom.php');
-        $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('body script') as $body)
-            echo $body->outertext;
-        ?>
-        </div>
+
     </div>
 
 </body>
