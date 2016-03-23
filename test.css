@@ -9,7 +9,7 @@ td a {
     color: black;
 }
 
-.colum1 h3{
+.colum1 h2{
     color: red;
     margin-bottom: -10px;
 }
@@ -24,5 +24,9 @@ td a {
     width: 100%;
     display: block;
     word-wrap: break-word;
+    overflow: hidden;
+}
+
+.jumbotron {
     overflow: hidden;
 }
