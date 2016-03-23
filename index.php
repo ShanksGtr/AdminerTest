@@ -5,6 +5,9 @@
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="test.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
@@ -53,7 +56,7 @@
             //$titles = $game->find('h3', 0);
 
             echo '<div class="col col-md-6 colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                '<div class="col col-md-6">' . $desc .  ":" ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+                '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . '<span class="fa fa-amazon">'.$amazon.'</span>' . '</div>';
         }
 
            // $item['image'] = ($class->find('img')->src);
