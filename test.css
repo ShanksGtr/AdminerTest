@@ -9,9 +9,9 @@ td a {
     color: black;
 }
 
-.colum1 {
-    float: left;
-    width: 34%;
+.colum1 h3{
+    color: red;
+    margin-bottom: -10px;
 }
 
 .colum2 {
