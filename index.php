@@ -15,6 +15,7 @@
         </form>
     </div>
     <div>
+        <div ID="maincolum">
         <?php
 
 
@@ -61,6 +62,7 @@
 
 
         ?>
+        </div>
         <div hidden>
         <?php
         include('simple_html_dom.php');
