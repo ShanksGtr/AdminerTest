@@ -42,15 +42,15 @@
             $info = $game->find('div[class=gridimg] a',0)->attr['href'];
             $date = $game->find('div[class=date] span', 0)->outertext;
             $html = file_get_html('http://www.videogamecountdown.com/'.$info);
-            $games2 = $html->find('div[class=two_third]', 0)->innertext;
-            $games3 = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
-            $games4 = $html->find('div[class=pagerwrapper] a', -1)->outertext;
+            $desc = $html->find('div[class=two_third]', 0)->innertext;
+            $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+            $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             //$titles = $game->find('h3', 0);
 
-            echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
-                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
-                . $date . " " . $games2 . "<br> " . $games3 . "<br>" . $games4;
+            echo '<div class="colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
+                '<div class="colum2">' .  $desc . "<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
         }
+
            // $item['image'] = ($class->find('img')->src);
            // echo $class->href . "<br>".
               //  $class->a . "<br>".
@@ -65,8 +65,8 @@
         <?php
         include('simple_html_dom.php');
         $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('body') as $body)
-            echo $body->innertext;
+        foreach($html->find('body script') as $body)
+            echo $body->outertext;
         ?>
         </div>
     </div>

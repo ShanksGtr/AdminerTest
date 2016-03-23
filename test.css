@@ -8,3 +8,11 @@ td a {
     text-decoration: none;
     color: black;
 }
+
+.colum1 {
+    float: left;
+}
+
+.colum2 {
+    border: 1px solid black;
+}
