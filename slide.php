@@ -3,10 +3,8 @@ include('simple_html_dom.php');
 $html = file_get_html('http://www.videogamecountdown.com/');
 
 
-foreach($html->find('div[class=inner]') as $body)
+foreach($html->find('div[class=inner]') as $body) {
 
-
-     echo  $body->outertext;
 ?>
 <html>
     <head>
@@ -40,7 +38,7 @@ foreach($html->find('div[class=inner]') as $body)
         </script>
     </head>
     <body>
-        <img src="1.jpg" width="800" height="600" name="slider">
+        <img src="<?php echo $body->outertext; }?>" width="800" height="600" name="slider">
         <form name="form">
             <input type="button" value="previous" onClick="prebutton();">
             <input type="button" value="next" onClick="nextbutton();">
