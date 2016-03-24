@@ -24,6 +24,7 @@
         <div class="jumbotron">
             <div>
                 <i class="fa fa-cog fa-spin fa-3x fa-fw margin-bottom"></i>
+                <a href="slide.php">Slider test!</a>
         <?php
 
 
@@ -57,7 +58,7 @@
             //$titles = $game->find('h3', 0);
 
             echo '<div class="col col-md-6 colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . '<span class="input-group-addon fa fa-amazon"></span>' . $amazon . '</div>';
+                '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
         }
 
            // $item['image'] = ($class->find('img')->src);
