@@ -57,7 +57,7 @@
             //$titles = $game->find('h3', 0);
 
             echo '<div class="col col-md-6 colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . '<span class="fa fa-amazon"></span>' . $amazon . '</div>';
+                '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . '<span class="input-group-addon fa fa-amazon" id="basic-addon1"></span>' . $amazon . '</div>';
         }
 
            // $item['image'] = ($class->find('img')->src);
