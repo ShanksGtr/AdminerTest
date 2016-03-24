@@ -34,7 +34,7 @@ foreach($html->find('div[class=inner]') as $body) {
         </script>
     </head>
     <body>
-        <div id="slider"><?php echo "<script>function slider($body->outertext);</script>";} ?></div>
+        <div id="slider"><?php echo "<script>function slider($body->outertext)</script>";} ?></div>
         <form name="form">
             <input type="button" value="previous" onClick="prebutton();">
             <input type="button" value="next" onClick="nextbutton();">
