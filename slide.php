@@ -9,36 +9,32 @@ foreach($html->find('div[class=inner]') as $body) {
 <html>
     <head>
         <script>
-            var img = new Array();
-            img[0] = new Image();
-            img[0].src = "1.jpg";
-            img[1] = new Image();
-            img[1].src = "2.jpg";
-            img[2] = new Image();
-            img[2].src = "3.jpg";
+            function slider() {
+                img[] = new Image();
+                img[] = "";
 
                 var number = 0;
 
-            function nextbutton(){
-                number++;
-                if(number >2 ) {
-                    number = 0;
+                function nextbutton() {
+                    number++;
+                    if (number > 2) {
+                        number = 0;
+                    }
+                    document.slider = img[number];
                 }
-                document.slider.src= img[number].src;
-            }
 
-            function prebutton(){
-                number--;
-                if(number < 0){
-                    number = 2;
+                function prebutton() {
+                    number--;
+                    if (number < 0) {
+                        number = 2;
+                    }
+                    getelementbyid.slider = img[number];
                 }
-                document.slider.src= img[number].src
             }
-
         </script>
     </head>
     <body>
-        <img src="<?php echo $body->outertext; }?>" width="800" height="600" name="slider">
+        <div id="slider"><?php echo "<script>function slider($body->outertext);</script>";} ?></div>
         <form name="form">
             <input type="button" value="previous" onClick="prebutton();">
             <input type="button" value="next" onClick="nextbutton();">
