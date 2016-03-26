@@ -1,5 +1,5 @@
 #subscribeForm {
-    visibility: hidden;
+    display: none;
 }
 
 td a {
