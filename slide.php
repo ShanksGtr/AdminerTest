@@ -71,7 +71,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
     .next {
         font-size: 30px;
-        float: right;
+
     }
 
 </style>
