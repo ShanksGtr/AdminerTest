@@ -77,7 +77,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         text-decoration: none;
         height: 61px;
         width: 38px;
-        background: transparent url("themes.gif") no-repeat left top;
+        background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat left top;
         margin-top: -45px;
     }
 
