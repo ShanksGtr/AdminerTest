@@ -136,7 +136,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 <body>
 <div class="container">
     <div class="jumbotron">
-    <div class="rslides">
+    <div class="rslides"> // https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html
                 <?php
                     echo '<li>';
                 echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
