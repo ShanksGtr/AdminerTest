@@ -61,6 +61,9 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         border: 0;
     }
 
+    #subscribeForm {
+        display: none;
+    }
 
 </style>
 <body>
@@ -83,7 +86,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     auto: false,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-                    pager: true,           // Boolean: Show pager, true or false
+                    pager: false,           // Boolean: Show pager, true or false
                     nav: true,             // Boolean: Show navigation, true or false
                     random: false,          // Boolean: Randomize the order of the slides, true or false
                     pause: false,           // Boolean: Pause on hover, true or false
