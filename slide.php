@@ -30,7 +30,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .rslides {
+    .row {
         position: relative;
         list-style: none;
         overflow: hidden;
@@ -39,7 +39,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin: 0;
     }
 
-    .rslides li {
+    .row li {
         -webkit-backface-visibility: hidden;
         position: absolute;
         display: none;
@@ -48,13 +48,13 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         top: 0;
     }
 
-    .rslides li:first-child {
+    .row li:first-child {
         position: relative;
         display: block;
         float: left;
     }
 
-    .rslides img {
+    .row img {
         display: block;
         height: auto;
         float: left;
@@ -65,15 +65,15 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
 </style>
 <body>
-            <ul class="rslides">
-                 <?php
-                     echo '<li href="'.$info.'">' . '<img src="'.$images.'"/>' . '</li>';
-                        }
+    <?php
+
+    echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+        '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+    }
                  ?>
-            </ul>
         <script>
             $(function() {
-                $(".rslides").responsiveSlides({
+                $(".row").responsiveSlides({
                     auto: true,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
@@ -87,7 +87,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
                     navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
                     manualControls: "",     // Selector: Declare custom pager navigation
-                    namespace: "rslides",   // String: Change the default namespace used
+                    namespace: "row",   // String: Change the default namespace used
                     before: function(){},   // Function: Before callback
                     after: function(){}     // Function: After callback
                 });
