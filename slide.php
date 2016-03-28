@@ -110,7 +110,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             overflow: hidden;
             text-decoration: none;
             height: 61px;
-            width: 38px;
+            width: 36px;
             background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat right top;
             margin-top: -45px;
         }
@@ -126,7 +126,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             overflow: hidden;
             text-decoration: none;
             height: 61px;
-            width: 38px;
+            width: 36px;
             background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat left top;
             margin-top: -45px;
         }
