@@ -68,9 +68,9 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     <ul class="rslides">
                 <?php
                     echo '<li>';
-                    echo '<img src="'.$images.'"/>';
+                    echo '<img src="'.$images.'"/>';}
                     echo '</li>';
-                }
+
                  ?>
         </ul>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
