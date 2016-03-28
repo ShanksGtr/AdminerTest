@@ -150,7 +150,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         <script>
             $(function() {
                 $(".rslides").responsiveSlides({
-                    auto: false,             // Boolean: Animate automatically, true or false
+                    auto: true,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
                     pager: false,           // Boolean: Show pager, true or false
