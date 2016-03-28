@@ -22,6 +22,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 <html>
 <head>
     <title>testo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -95,6 +96,40 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         width: 38px;
         background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat right top;
         margin-top: -45px;
+    }
+
+    @media all and (max-width: 699px) and (min-width: 200px) {
+        .next {
+            z-index: 3;
+            position: absolute;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            top: 50%;
+            right: -1%;
+            opacity: 0.7;
+            text-indent: -9999px;
+            overflow: hidden;
+            text-decoration: none;
+            height: 61px;
+            width: 38px;
+            background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat right top;
+            margin-top: -45px;
+        }
+
+        .prev {
+            z-index: 3;
+            position: absolute;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            top: 50%;
+            left: -1%;
+            opacity: 0.7;
+            text-indent: -9999px;
+            overflow: hidden;
+            text-decoration: none;
+            height: 61px;
+            width: 38px;
+            background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat left top;
+            margin-top: -45px;
+        }
     }
 
 </style>
