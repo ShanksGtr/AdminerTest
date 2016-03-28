@@ -21,8 +21,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 ?>
 <html>
 <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="responsiveslides.min.js"></script>
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -72,6 +71,8 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
                  ?>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="responsiveslides.min.js"></script>
         <script>
             $(function() {
                 $(".rslides").responsiveSlides({
