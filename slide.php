@@ -20,60 +20,57 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
 ?>
 <html>
-    <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="responsiveslides.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    </head>
-    <style>
-        .rslides {
-            position: relative;
-            list-style: none;
-            overflow: hidden;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
 
-        .rslides li {
-            -webkit-backface-visibility: hidden;
-            position: absolute;
-            display: none;
-            width: 100%;
-            left: 0;
-            top: 0;
-        }
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
 
-        .rslides li:first-child {
-            position: relative;
-            display: block;
-            float: left;
-        }
-
-        .rslides img {
-            display: block;
-            height: auto;
-            float: left;
-            width: 100%;
-            border: 0;
-        }
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 0;
+    }
 
 
-    </style>
-    <body>
-        <div class="rslides">
-            <?php
-                echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
-                }
-            ?>
-
-        </div>
+</style>
+<body>
+            <ul class="rslides">
+                 <?php
+                     echo '<img src="' . $images . '" href="' . $info . '"/>';
+                        }
+                 ?>
+            </ul>
         <script>
             $(function() {
                 $(".rslides").responsiveSlides();
