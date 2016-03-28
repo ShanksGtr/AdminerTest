@@ -36,7 +36,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         width: 100%;
         padding: 0;
         margin: 0;
-
+        max-width: 500px;
     }
 
     .rslides li {
