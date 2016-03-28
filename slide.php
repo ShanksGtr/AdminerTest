@@ -36,7 +36,6 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         width: 100%;
         padding: 0;
         margin: 0;
-        max-width: 500px;
     }
 
     .rslides li {
@@ -65,6 +64,8 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
 </style>
 <body>
+<div class="container">
+    <div class="jumbotron">
     <div class="rslides">
                 <?php
                     echo '<li>';
@@ -98,5 +99,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                 });
             });
         </script>
+        </div>
+    </div>
     </body>
 </html>
