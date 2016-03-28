@@ -100,8 +100,8 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     random: false,          // Boolean: Randomize the order of the slides, true or false
                     pause: false,           // Boolean: Pause on hover, true or false
                     pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-                    prevText: "<",   // String: Text for the "previous" button
-                    nextText: "                                             >",       // String: Text for the "next" button
+                    prevText: "               <",   // String: Text for the "previous" button
+                    nextText: "                                                         >",       // String: Text for the "next" button
                     maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
                     navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
                     manualControls: "",     // Selector: Declare custom pager navigation
