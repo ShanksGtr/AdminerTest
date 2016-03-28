@@ -60,14 +60,14 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
     </style>
     <body>
-        <ul class="rslides">
+        <div class="rslides">
             <?php
                 echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
                 }
             ?>
 
-        </ul>
+        </div>
         <script>
             $(function() {
                 $(".rslides").responsiveSlides();
