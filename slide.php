@@ -30,7 +30,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .row {
+    .rslides {
         position: relative;
         list-style: none;
         overflow: hidden;
@@ -39,7 +39,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin: 0;
     }
 
-    .row li {
+    .rslides li {
         -webkit-backface-visibility: hidden;
         position: absolute;
         display: none;
@@ -48,13 +48,13 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         top: 0;
     }
 
-    .row li:first-child {
+    .rslides li:first-child {
         position: relative;
         display: block;
         float: left;
     }
 
-    .row img {
+    .rslides img {
         display: block;
         height: auto;
         float: left;
@@ -65,20 +65,22 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
 </style>
 <body>
+    <div class="rslides">
     <?php
 
     echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
         '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
     }
                  ?>
+        </div>
         <script>
             $(function() {
-                $(".row").responsiveSlides({
+                $(".rslides").responsiveSlides({
                     auto: true,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
                     pager: true,           // Boolean: Show pager, true or false
-                    nav: false,             // Boolean: Show navigation, true or false
+                    nav: true,             // Boolean: Show navigation, true or false
                     random: false,          // Boolean: Randomize the order of the slides, true or false
                     pause: false,           // Boolean: Pause on hover, true or false
                     pauseControls: true,    // Boolean: Pause when hovering controls, true or false
