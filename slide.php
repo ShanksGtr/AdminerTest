@@ -65,7 +65,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         display: none;
     }
 
-    .centered-btns_nav {
+    .prev {
         z-index: 3;
         position: absolute;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -81,7 +81,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin-top: -45px;
     }
 
-    .centered-btns_nav.next {
+    .next {
         left: auto;
         background-position: right top;
         right: 0;
