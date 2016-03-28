@@ -103,7 +103,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     prevText: "<",   // String: Text for the "previous" button
                     nextText: ">",       // String: Text for the "next" button
                     maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-                    navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                    navContainer: "mid",       // Selector: Where controls should be appended to, default is after the 'ul'
                     manualControls: "",     // Selector: Declare custom pager navigation
                     namespace: "rslides",   // String: Change the default namespace used
                     before: function(){},   // Function: Before callback
