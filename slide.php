@@ -66,11 +66,10 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 </style>
 <body>
     <div class="rslides">
-    <?php
-    echo '<li href="'.$info.'">';
-    echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-        '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
-    echo '</li>';}
+                <?php
+                    echo '<a href="'.$info.'">';
+                    echo '<img src="'.$images.'"/>';
+                    echo '</a>'; }
                  ?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -78,7 +77,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         <script>
             $(function() {
                 $(".rslides").responsiveSlides({
-                    auto: false,             // Boolean: Animate automatically, true or false
+                    auto: true,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
                     pager: true,           // Boolean: Show pager, true or false
