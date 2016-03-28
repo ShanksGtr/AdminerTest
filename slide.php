@@ -101,7 +101,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     @media all and (max-width: 699px) and (min-width: 200px) {
         .next {
             z-index: 3;
-            position: absolute;
+            position: fixed;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             top: 50%;
             right: -1%;
@@ -117,7 +117,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
         .prev {
             z-index: 3;
-            position: absolute;
+            position: fixed;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             top: 50%;
             left: -1%;
@@ -169,6 +169,9 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                 });
             });
         </script>
+        <div>
+
+        </div>
         </div>
     </div>
     </body>
