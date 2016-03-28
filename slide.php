@@ -70,7 +70,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         position: absolute;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         top: 50%;
-        left: 0;
+        left: 20%;
         opacity: 0.7;
         text-indent: -9999px;
         overflow: hidden;
@@ -82,9 +82,19 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     }
 
     .next {
-        left: auto;
-        background-position: right top;
-        right: 0;
+        z-index: 3;
+        position: absolute;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        top: 50%;
+        right: 20%;
+        opacity: 0.7;
+        text-indent: -9999px;
+        overflow: hidden;
+        text-decoration: none;
+        height: 61px;
+        width: 38px;
+        background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat right top;
+        margin-top: -45px;
     }
 
 </style>
@@ -113,8 +123,8 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     random: false,          // Boolean: Randomize the order of the slides, true or false
                     pause: false,           // Boolean: Pause on hover, true or false
                     pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-                    prevText: "               <",   // String: Text for the "previous" button
-                    nextText: "                                                         >",       // String: Text for the "next" button
+                    prevText: "<",   // String: Text for the "previous" button
+                    nextText: ">",       // String: Text for the "next" button
                     maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
                     navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
                     manualControls: "",     // Selector: Declare custom pager navigation
