@@ -67,7 +67,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 <body>
             <ul class="rslides">
                  <?php
-                     echo '<li href="'.$info.'>"' . '<img src="'.$images.'"/>' . '</li>';
+                     echo '<li href="'.$info.'">' . '<img src="'.$images.'"/>' . '</li>';
                         }
                  ?>
             </ul>
