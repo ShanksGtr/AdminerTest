@@ -115,13 +115,18 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
         -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
         box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-        width: 9px;
+        width: 20px;
     }
 
     .rslides_tabs li {
+        margin-top: 5px;
         display: inline;
         margin-right: 5px;
-        align
+
+    }
+
+    .rslides_tabs ul {
+        text-align: center;
     }
 
     @media all and (max-width: 699px) and (min-width: 200px) {
