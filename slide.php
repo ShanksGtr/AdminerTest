@@ -69,7 +69,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     .prev {
         z-index: 3;
         position: absolute;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         top: 50%;
         left: 0%;
         opacity: 0.7;
@@ -85,7 +85,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     .next {
         z-index: 3;
         position: absolute;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         top: 50%;
         right: 0%;
         opacity: 0.7;
@@ -99,27 +99,27 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     }
 
     .centered-btns_tabs a, .transparent-btns_tabs a, .large-btns_tabs a {
-    text-indent: -9999px;
-    overflow: hidden;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    background: #ccc;
-    background: rgba(0,0,0, .2);
-    display: inline-block;
-    _display: block;
-    -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-    -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-    box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-    width: 9px;
-    /* height: 9px; */
+        text-indent: -9999px;
+        overflow: hidden;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        background: #ccc;
+        background: rgba(0, 0, 0, .2);
+        display: inline-block;
+        _display: block;
+        -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+        -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+        box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+        width: 9px;
+        /* height: 9px; */
     }
 
     @media all and (max-width: 699px) and (min-width: 200px) {
         .next {
             z-index: 3;
             position: fixed;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             top: 50%;
             right: -2%;
             opacity: 0.7;
@@ -135,7 +135,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         .prev {
             z-index: 3;
             position: fixed;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             top: 50%;
             left: -2%;
             opacity: 0.7;
@@ -154,13 +154,14 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 <body>
 <div class="container">
     <div class="jumbotron">
-    <div class="rslides"> <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
-                <?php
-                    echo '<li>';
-                echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
-
-                    echo '</li>'; }
+        <div class="rslides">
+            <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
+            <?php
+            echo '<li>';
+            echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+            }
+                    echo '</li>';
                  ?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
