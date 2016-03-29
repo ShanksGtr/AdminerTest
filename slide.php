@@ -98,6 +98,23 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin-top: -45px;
     }
 
+    .centered-btns_tabs a, .transparent-btns_tabs a, .large-btns_tabs a {
+    text-indent: -9999px;
+    overflow: hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: #ccc;
+    background: rgba(0,0,0, .2);
+    display: inline-block;
+    _display: block;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+    box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+    width: 9px;
+    /* height: 9px; */
+    }
+
     @media all and (max-width: 699px) and (min-width: 200px) {
         .next {
             z-index: 3;
@@ -130,6 +147,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
             background: transparent url("http://responsiveslides.com/themes/themes.gif") no-repeat left top;
             margin-top: -45px;
         }
+
     }
 
 </style>
@@ -141,8 +159,8 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     echo '<li>';
                 echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
-                }
-                    echo '</li>';
+
+                    echo '</li>'; }
                  ?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -153,7 +171,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     auto: false,             // Boolean: Animate automatically, true or false
                     speed: 500,            // Integer: Speed of the transition, in milliseconds
                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-                    pager: false,           // Boolean: Show pager, true or false
+                    pager: true,           // Boolean: Show pager, true or false
                     nav: true,             // Boolean: Show navigation, true or false
                     random: false,          // Boolean: Randomize the order of the slides, true or false
                     pause: true,           // Boolean: Pause on hover, true or false
