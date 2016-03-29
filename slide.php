@@ -136,7 +136,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
     }
 
-    .rslides_tabs ul {
+    .rslides_tabs {
         text-align: center;
         margin-top: 5px;
     }
