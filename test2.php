@@ -5,6 +5,7 @@
     <title></title>
 </head>
 <body>
+    <h1>Test</h1>
     <?php include('slide.php');
      ?>
 </body>
