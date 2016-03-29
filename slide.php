@@ -98,11 +98,11 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin-top: -45px;
     }
 
-    .rslides_here a {
+    .rslides_tabs a {
         background: #222;
         background: rgba(0,0,0, .8);
     }
-    .rslides_here a {
+    .rslides_tabs a {
         text-indent: -9999px;
         overflow: hidden;
         -webkit-border-radius: 15px;
