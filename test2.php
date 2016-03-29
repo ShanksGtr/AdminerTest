@@ -70,7 +70,8 @@
     <!-- http://stackoverflow.com/questions/1566595/can-i-use-multiple-versions-of-jquery-on-the-same-page -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
-        var jQuery_1_12_0 = $.noConflict();
+        var $i1 = JQuery.noConflict();
+            alert($i1.fn.jquery);
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
