@@ -99,8 +99,20 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     }
 
     .rslides_here a {
+        text-indent: -9999px;
+        overflow: hidden;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
         background: #222;
         background: rgba(0,0,0, .8);
+        display: inline-block;
+        _display: block;
+        -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+        -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+        box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+        width: 20px;
+
     }
     .rslides_tabs a {
         text-indent: -9999px;
@@ -119,7 +131,6 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     }
 
     .rslides_tabs li {
-        margin-top: 5px;
         display: inline;
         margin-right: 5px;
 
@@ -127,6 +138,7 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
     .rslides_tabs ul {
         text-align: center;
+        margin-top: 5px;
     }
 
     @media all and (max-width: 699px) and (min-width: 200px) {
