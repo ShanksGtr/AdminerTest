@@ -194,6 +194,9 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                  ?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>
+            var jQuery_1_8_3 = $.noConflict(true);
+        </script>
         <script src="responsiveslides.min.js"></script>
         <script>
             $(function() {
