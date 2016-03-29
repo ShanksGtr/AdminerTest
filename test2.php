@@ -65,7 +65,7 @@
     <div class="container-fluid"></div>
 </nav>
     <h1>Test</h1>
-    <?php include('slide.php');
+    <?php include_once('slide.php');
      ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
