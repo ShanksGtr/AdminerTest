@@ -98,6 +98,10 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         margin-top: -45px;
     }
 
+    .centered-btns_here a, .transparent-btns_here a, .large-btns_here a {
+        background: #222;
+        background: rgba(0,0,0, .8);
+    }
     .centered-btns_tabs a, .transparent-btns_tabs a, .large-btns_tabs a {
         text-indent: -9999px;
         overflow: hidden;
@@ -105,15 +109,14 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
         -moz-border-radius: 15px;
         border-radius: 15px;
         background: #ccc;
-        background: rgba(0, 0, 0, .2);
+        background: rgba(0,0,0, .2);
         display: inline-block;
         _display: block;
-        -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
-        -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
-        box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+        -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+        -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+        box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
         width: 9px;
-        /* height: 9px; */
-    }
+    /* height: 9px; */
 
     @media all and (max-width: 699px) and (min-width: 200px) {
         .next {
