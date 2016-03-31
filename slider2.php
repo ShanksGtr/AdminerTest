@@ -170,11 +170,11 @@
     }
 
     #slides {
-        width:100%;
+        height:100%;
     }
 
     .slidesjs-container {
-        overflow: none;
+        overflow: visible;
     }
 
     img {
