@@ -37,7 +37,3 @@ td a {
  #slides {
      height:100%;
  }
-
-div.slidesjs-container {
-    overflow-y: scroll;
-}
