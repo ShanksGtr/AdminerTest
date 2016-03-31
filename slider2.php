@@ -17,7 +17,7 @@ foreach ($games as $game) {
     $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
     $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 //$titles = $game->find('h3', 0);
-}
+
 
 ?>
 <html>
@@ -200,11 +200,11 @@ foreach ($games as $game) {
 <div class="container">
     <div class="jumbotron">
         <div id="slides">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
+            <?php
+            echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+            }
+            ?>
         </div>
     </div>
 </div>
