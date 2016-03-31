@@ -39,5 +39,5 @@ td a {
  }
 
 div.slidesjs-container {
-    overflow: auto;
+    overflow-y: scroll;
 }
