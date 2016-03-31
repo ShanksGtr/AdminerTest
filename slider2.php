@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.slides.min.js"></script>
     <script>
         $(function(){
