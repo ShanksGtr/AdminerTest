@@ -14,8 +14,7 @@
     <script>
         $(function(){
             $("#slides").slidesjs({
-                width: 940,
-                height: 528
+
             });
         });
     </script>
@@ -171,7 +170,7 @@
     }
 
     #slides {
-        display:none;
+        width:100%;
     }
 
     img {
