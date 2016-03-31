@@ -10,6 +10,14 @@
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="jquery.slides.min.js"></script>
+    <script>
+        $(function(){
+            $("#slides").slidesjs({
+                width: 100%,
+                height: 100%
+            });
+        });
+    </script>
 </head>
 <style>
     .rslides {
