@@ -177,6 +177,9 @@
         width: 100%;
     }
 
+    p, h2, h3 {
+        font-size: 100%;
+    }
 </style>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
