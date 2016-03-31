@@ -213,6 +213,7 @@
                     </ul>
                 </li>
             </ul>
+            </nav>
 <div class="container">
     <div class="jumbotron">
         <div id="slides">
