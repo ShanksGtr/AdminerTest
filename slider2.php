@@ -171,6 +171,7 @@
 
     #slides {
         width:100%;
+        overflow: ;
     }
 
     img {
