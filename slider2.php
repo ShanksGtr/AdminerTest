@@ -245,5 +245,5 @@
 </div>
 
 </body>
-<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" type="text/css" href="test.css">
 </html>
