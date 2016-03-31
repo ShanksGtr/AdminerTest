@@ -171,7 +171,10 @@
 
     #slides {
         width:100%;
-        overflow: ;
+    }
+
+    .slidesjs-container {
+        overflow: none;
     }
 
     img {
