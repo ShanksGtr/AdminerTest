@@ -13,7 +13,8 @@
     <script>
         $(function(){
             $("#slides").slidesjs({
-                width: 940
+                width: 940,
+                height: 528
             });
         });
     </script>
