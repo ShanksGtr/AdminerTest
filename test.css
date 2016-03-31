@@ -38,6 +38,6 @@ td a {
      height:100%;
  }
 
-.slidesjs-container {
+div.slidesjs-container {
     overflow: auto;
 }
