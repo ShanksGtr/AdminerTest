@@ -1,25 +1,3 @@
-<?php
-
-include('simple_html_dom.php');
-$html = file_get_html('http://www.videogamecountdown.com/');
-$games = $html->find('div[class=inner]');
-
-$games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
-foreach ($games as $game) {
-
-
-    $titles = $game->find('h3 a', 0)->plaintext;
-    $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-    $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
-    $date = $game->find('div[class=date] span', 0)->outertext;
-    $html = file_get_html('http://www.videogamecountdown.com/' . $info);
-    $desc = $html->find('div[class=two_third]', 0)->innertext;
-    $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
-    $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
-//$titles = $game->find('h3', 0);
-
-
-?>
 <html>
 <head>
     <title>testo</title>
@@ -201,7 +179,26 @@ foreach ($games as $game) {
     <div class="jumbotron">
         <div id="slides">
             <?php
-            echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+            include('simple_html_dom.php');
+            $html = file_get_html('http://www.videogamecountdown.com/');
+            $games = $html->find('div[class=inner]');
+
+            $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
+            foreach ($games as $game) {
+
+
+                $titles = $game->find('h3 a', 0)->plaintext;
+                $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
+                $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                $date = $game->find('div[class=date] span', 0)->outertext;
+                $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                $desc = $html->find('div[class=two_third]', 0)->innertext;
+                $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
+//$titles = $game->find('h3', 0);
+
+
+                echo '<div class="row textglow ">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                 '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
             }
             ?>
