@@ -39,5 +39,5 @@ td a {
  }
 
 .slidesjs-container {
-    overflow: visible;
+    overflow: auto;
 }
