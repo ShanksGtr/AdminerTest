@@ -238,18 +238,19 @@
                 '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
             }
             ?>
-            <style>
-                #slides {
-                    height:100%;
-                }
 
-                .slidesjs-container {
-                    overflow: visible;
-                }
-            </style>
         </div>
     </div>
 </div>
 
 </body>
+<style>
+    #slides {
+        height:100%;
+    }
+
+    .slidesjs-container {
+        overflow: visible;
+    }
+</style>
 </html>
