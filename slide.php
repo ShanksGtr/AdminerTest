@@ -27,7 +27,10 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
 </head>
 <style>
     .rslides {
@@ -181,6 +184,42 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
 </style>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php">SGamers</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
+                        <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
+                        <li><a href="upcoming.php?plat=vita">Playstation Vita</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="upcoming.php?plat=xbox">Xbox One</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="upcoming.php?plat=wii">Wii U</a></li>
+                        <li><a href="upcoming.php?plat=3ds">3DS</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="upcoming.php?plat=pc">PC</a></li>
+                    </ul>
+                </li>
+            </ul>
+</nav>
 <div class="container">
     <div class="jumbotron">
         <div class="rslides">
@@ -193,12 +232,12 @@ $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                     echo '</li>';
                  ?>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>
             var $i2 = JQuery.noConflict();
             alert($i2.fn.jquery);
         </script>
-        <script src="responsiveslides.min.js"></script>
+        <script src="responsiveslides.min.js"></script> -->
         <script>
             $(function() {
                 $(".rslides").responsiveSlides({
