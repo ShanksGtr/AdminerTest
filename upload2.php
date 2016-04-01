@@ -10,7 +10,7 @@
             "api_secret" => "xb8fpFdk5i8j920ALSP_Uj45Lyc"
         ));
 
-    \Cloudinary\Uploader::upload($_FILES["file"]["tmp_name"],
+    \Cloudinary\Uploader::upload($_POST["file"]["tmp_name"],
         array(
             "public_id" => "sample_id",
             "crop" => "limit", "width" => "2000", "height" => "2000",
