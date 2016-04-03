@@ -31,16 +31,16 @@
         if(isset($_FILES['fileToUpload'])){
 
             $uploadname = $_FILES['fileToUpload']['name'];
-            $uploadtemp = $_FILES['fileToUpload']['temp_name'];
+            $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
             $uploadtype = $_FILES['fileToUpload']['type'];
 
             $uploadname = preg_replace("#[^a-z0-9.]#i", "", $uploadname);
 
 
-            if(!$uploadtemp) {
+            if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
             }else{
-                move_uploaded_file($uploadtemp, "upload/$uploadname");
+                move_uploaded_file($uploadtmp, "upload/$uploadname");
                 echo "Uploaded  " . $uploadname;
             }
         }
