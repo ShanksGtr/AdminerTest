@@ -41,6 +41,7 @@
                 die("No File Selected, Please upload again");
             }else{
                 move_uploaded_file($uploadtemp, "upload/$uploadname");
+                echo "Uploaded  " . $uploadname;
             }
         }
     ?>
