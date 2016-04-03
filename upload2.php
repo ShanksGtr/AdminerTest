@@ -40,8 +40,8 @@
             if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
             }else{
-                move_uploaded_file($uploadtmp, ".upload/$uploadname");
-                echo "Uploaded  " . $uploadname;
+                move_uploaded_file($uploadtmp, "upload/" . $uploadname);
+                echo  $uploadname;
             }
         }
     ?>
