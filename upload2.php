@@ -2,7 +2,7 @@
     <?php
 
 
-    if (isset($_POST['submit'])) {
+    /*if (isset($_POST['submit'])) {
         require 'Cloudinary.php';
         require 'Uploader.php';
         require 'Api.php';
@@ -25,5 +25,22 @@
                     "crop" => "fit", "format" => "png" )
             ),
             "tags" => array( "special", "for_homepage" )
-        ));}
+        ));}*/
+
+
+        if(isset($_FILES['fileToUpload'])){
+
+            $uploadname = $_FILES['fileToUpload']['name'];
+            $uploadtemp = $_FILES['fileToUpload']['temp_name'];
+            $uploadtype = $_FILES['fileToUpload']['type'];
+
+            $uploadname = preg_replace("#[^a-z0-9.]#i", "", $uploadname);
+
+
+            if(!$uploadtemp) {
+                die("No File Selected, Please upload again");
+            }else{
+                move_uploaded_file($uploadtemp, "upload/$uploadname");
+            }
+        }
     ?>
