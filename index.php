@@ -14,7 +14,7 @@
 <body>
     <h1>We are testing now ADMINER! RAWR and taking info</h1>
     <div>
-        <form id="uploadfile" action="upload2.php" method="post" enctype="multipart/form-data">
+        <form id="uploadfile" action="upload.php" method="post" enctype="multipart/form-data">
             Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
