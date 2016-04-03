@@ -28,7 +28,7 @@
         ));}*/
 
 
-        if(isset($_FILES['fileToUpload'])){
+        if(isset($_POST['submit'])){
 
             $uploadname = $_FILES['fileToUpload']['name'];
             $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
