@@ -28,7 +28,7 @@
         ));}*/
 
 
-        if(isset($_POST['submit'])){
+        if(isset($_FILES['fileToUpload'])){
 
             $uploadname = $_FILES['fileToUpload']['name'];
             $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
@@ -40,7 +40,7 @@
             if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
             }else{
-                move_uploaded_file($uploadtmp, "upload/" . $uploadname);
+                move_uploaded_file($uploadtmp, "Upload/" . $uploadname);
                 echo  $uploadname . "<br>";
                 echo $uploadtmp;
             }
