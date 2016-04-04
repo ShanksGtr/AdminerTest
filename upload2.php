@@ -41,7 +41,7 @@
                 die("No File Selected, Please upload again");
             }else{
                  move_uploaded_file($uploadtmp, "" . $uploadname);
-                echo  '<img src="gtrtest.azurewebsites.net/'.$uploadname.'"/>' . "<br>";
+                echo  '<img src="'.$uploadname.'"/>' . "<br>";
 
             }
         }
