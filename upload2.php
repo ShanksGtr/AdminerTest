@@ -42,7 +42,7 @@
             }else{
                 $image = move_uploaded_file($uploadtmp, "" . $uploadname);
                 echo  '<img src="' . $image . '"/>' . "<br>";
-                echo $image;
+                echo $image . "<br>";
                 echo $uploadname;
 
 
