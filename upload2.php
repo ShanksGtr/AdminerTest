@@ -32,7 +32,7 @@
         if(isset($_FILES['fileToUpload'])){
 
             $uploadname = $_FILES['fileToUpload']['name'];
-            $uploadname = mt_rand(100000, 999999).$uploadname;
+            $uploadname = mt_rand(10000, 99999).$uploadname;
             $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
             $uploadtype = $_FILES['fileToUpload']['type'];
             $filesize = $_FILES['fileToUpload']['size'];
@@ -41,12 +41,12 @@
 
             $imageFileType = pathinfo($uploadname,PATHINFO_EXTENSION);
 
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-                die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
-
             if(($filesize > 1000000)) {
                 die("File is more than 1mb");
             }
+
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+                die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
 
             if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
