@@ -31,6 +31,7 @@
         if(isset($_FILES['fileToUpload'])){
 
             $uploadname = $_FILES['fileToUpload']['name'];
+            $uploadname = mt_rand(100000, 999999).$uploadname;
             $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
             $uploadtype = $_FILES['fileToUpload']['type'];
 
