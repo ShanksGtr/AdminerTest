@@ -27,7 +27,7 @@
             "tags" => array( "special", "for_homepage" )
         ));}*/
 /////////////////////////////////////////////////////////////////////////////
-    // https://www.youtube.com/watch?v=wEmxwNLjf_c
+    // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 
         if(isset($_FILES['fileToUpload'])){
 
@@ -44,7 +44,7 @@
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
                 die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
 
-            if($filesize > 1000000) {
+            if($filesize > 125000) {
                 die("File is more than 1mb");
             }
 
@@ -53,6 +53,7 @@
             }else{
                  move_uploaded_file($uploadtmp, "" . $uploadname);
                 echo  '<img src="'.$uploadname.'"/>' . "<br>";
+
 
             }
         }
