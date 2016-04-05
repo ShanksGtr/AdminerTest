@@ -41,17 +41,32 @@
 
             $imageFileType = pathinfo($uploadname,PATHINFO_EXTENSION);
 
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+                die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
+
             if(($filesize > 1000000)) {
                 die("File is more than 1mb");
             }
 
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-                die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
-
             if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
+
             }else{
-                 move_uploaded_file($uploadtmp, "" . $uploadname);
+                $db = new mysqli("eu-cdbr-azure-north-d.cloudapp.net",
+                    "be56106772d6a4", "33eeb80a", "SGamers" );
+
+                if ($db->connect_error){
+                    die('Connectfailed'['.$db->connect_error.']);
+                }
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
+
+                move_uploaded_file($uploadtmp, "" . $uploadname);
+                $user_id = $_SESSION['userid'];
+                $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id=861";
+                $result = mysqli_query($db, $sqlinsert);
+                //echo  '<img src="'.$uploadname.'"/>' . "<br>";
                 echo  '<img src="'.$uploadname.'"/>' . "<br>";
 
 
