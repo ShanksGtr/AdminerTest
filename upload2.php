@@ -30,6 +30,15 @@
     // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 
         if(isset($_FILES['fileToUpload'])){
+            $db = new mysqli("eu-cdbr-azure-north-d.cloudapp.net",
+                "be56106772d6a4", "33eeb80a", "SGamers" );
+
+            if ($db->connect_error){
+                die('Connectfailed'['.$db->connect_error.']);
+            }
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
 
             $uploadname = $_FILES['fileToUpload']['name'];
             $uploadname = mt_rand(10000, 99999).$uploadname;
@@ -52,18 +61,9 @@
                 die("No File Selected, Please upload again");
 
             }else{
-                $db = new mysqli("eu-cdbr-azure-north-d.cloudapp.net",
-                    "be56106772d6a4", "33eeb80a", "SGamers" );
 
-                if ($db->connect_error){
-                    die('Connectfailed'['.$db->connect_error.']);
-                }
-                ini_set('display_errors', 1);
-                ini_set('display_startup_errors', 1);
-                error_reporting(E_ALL);
 
                 move_uploaded_file($uploadtmp, "" . $uploadname);
-                $user_id = $_SESSION['userid'];
                 $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id=861";
                 $result = mysqli_query($db, $sqlinsert);
                 //echo  '<img src="'.$uploadname.'"/>' . "<br>";
