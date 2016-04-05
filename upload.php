@@ -1,4 +1,6 @@
 <?php
+    // http://www.w3schools.com/php/php_file_upload.asp
+
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;

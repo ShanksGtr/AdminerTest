@@ -26,7 +26,8 @@
             ),
             "tags" => array( "special", "for_homepage" )
         ));}*/
-
+/////////////////////////////////////////////////////////////////////////////
+    // https://www.youtube.com/watch?v=wEmxwNLjf_c
 
         if(isset($_FILES['fileToUpload'])){
 
@@ -34,9 +35,18 @@
             $uploadname = mt_rand(100000, 999999).$uploadname;
             $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
             $uploadtype = $_FILES['fileToUpload']['type'];
-
+            $filesize = $_FILES['fileToUpload']['size'];
+            // incase there's a space in the name or so
             $uploadname = preg_replace("#[^a-z0-9.]#i", "", $uploadname);
 
+            $imageFileType = pathinfo($uploadname,PATHINFO_EXTENSION);
+
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+                die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
+
+            if($filesize > 1000000) {
+                die("File is more than 1mb");
+            }
 
             if(!$uploadtmp) {
                 die("No File Selected, Please upload again");
@@ -46,4 +56,7 @@
 
             }
         }
+
+
+
     ?>
