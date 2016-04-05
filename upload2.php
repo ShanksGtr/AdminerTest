@@ -44,7 +44,7 @@
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
                 die ("Sorry, only JPG, JPEG & PNG  files are allowed.");}
 
-            if($filesize > 1000000) {
+            if(($filesize > 1000000)) {
                 die("File is more than 1mb");
             }
 
