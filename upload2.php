@@ -62,9 +62,9 @@
 
             }else{
 
-
+                $userid= 861;
                 move_uploaded_file($uploadtmp, "" . $uploadname);
-                $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id='861'";
+                $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id='$userid'";
                 $result = mysqli_query($db, $sqlinsert);
                 //echo  '<img src="'.$uploadname.'"/>' . "<br>";
                 echo  '<img src="'.$uploadname.'"/>' . "<br>";
