@@ -12,7 +12,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>We are testing now ADMINER! RAWR and taking info</h1><br>
+    <h1>We are testing now ADMINER! RAWR and taking info & chat now</h1><br>
     <script>var __v='barc-user-gtrtest';</script>
     <script type="text/javascript">
         (function(d) {
