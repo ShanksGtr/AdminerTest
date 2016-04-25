@@ -12,7 +12,16 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>We are testing now ADMINER! RAWR and taking info</h1>
+    <h1>We are testing now ADMINER! RAWR and taking info</h1><br>
+    <script>var __v='barc-user-gtrtest';</script>
+    <script type="text/javascript">
+        (function(d) {
+            var b = d.createElement("script"); b.type = "text/javascript"; b.async = true;
+            b.src = ("https:" == d.location.protocol ? "https" : "http") + "://barc.com/js/libs/barc/barc.js";
+            var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(b, s);
+        })(document);
+    </script>
+    <br>
     <div>
         <form id="uploadfile" action="upload2.php" method="post" enctype="multipart/form-data">
             Select image to upload:
